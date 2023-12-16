@@ -14,10 +14,10 @@ Logfile="/tmp/$0-$TIME.log"
 Validate(){
 if [ $1 -ne 0 ]
 then
-    echo -e "$2 .....$R Failed $N"  >>&$Logfile
+    echo -e "$2 .....$R Failed $N"  &>>$Logfile
     exit 1
 else 
-    echo -e "$2.....$G Success $N"  >>&$Logfile
+    echo -e "$2.....$G Success $N"  &>>$Logfile
 
 fi
 
@@ -25,21 +25,21 @@ fi
 
 if [ $ID -ne 0 ]
 then 
-   echo -e "$R Error,please run with root user $N"  >>&$Logfile
+   echo -e "$R Error,please run with root user $N"  &>>$Logfile
    exit 1
 else 
-   echo -e "$G I am a root user $N"   >>&$Logfile
+   echo -e "$G I am a root user $N"  &>>$Logfile
 fi
 
-cp Mongo.repo /etc/yum.repos.d/mongo.repo  >>&$Logfile
+cp Mongo.repo /etc/yum.repos.d/mongo.repo  &>>$Logfile
 
 Validate $? "COPING OF Mongorepo"
 
-dnf install mongodb-org -y  >>&$Logfile
+dnf install mongodb-org -y  &>>$Logfile
 
 Validate $? "installation of mongodb"
 
-systemctl enable mongod >>&$Logfile
+systemctl enable mongod &>>$Logfile
 
 Validate $? "enabling of mongodb"
 

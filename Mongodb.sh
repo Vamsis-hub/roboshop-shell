@@ -12,7 +12,7 @@ Logfile="/tmp/$0-$TIME.log"
 
 
 
-Vaildate(){
+Validate(){
 if [ $1 -ne 0 ]
 then
     echo "$2 .....$R Failed $N" &>>$Logfile
@@ -33,6 +33,6 @@ fi
 
 cp Mongo.repo /etc/yum.repos.d/mongo.repo &>>$Logfile
 
-Vaildate $? "COPING OF Mongorepo"
+Validate $? "COPING OF Mongorepo"
 
 

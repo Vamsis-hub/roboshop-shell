@@ -33,4 +33,6 @@ fi
 
 cp Mongo.repo /etc/yum.repos.d/mongo.repo &>>$Logfile
 
+Vaildate $? "COPING OF Mongorepo"
+
 

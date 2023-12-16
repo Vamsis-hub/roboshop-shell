@@ -26,7 +26,7 @@ else
    echo -e "$G I am a root user $N"  
 fi
 
-cp mongo.repo /etc/yum.repos.d/mongo.repo 
+cp Mongo.repo /etc/yum.repos.d/mongo.repo 
 
 Validate $? "COPING OF Mongorepo"
 

@@ -2,8 +2,10 @@
 
 INSTANCES=("MONGODB" "REDIS" "MYSQL" "RABBITMQ" "CART" "USER" "CATALOGUE" "PAYMENT" "SHIPPING" "DISPATCH" "WEB")
 
+ echo "instanse is: $i
 
 for i in "${INSTANCES[@]}"
+
 do
     if [ $i == "MONGODB" ] || [ $i == "SHIPPING" ] || [ $i == "MYSQL" ]
     then

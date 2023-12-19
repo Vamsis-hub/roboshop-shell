@@ -3,9 +3,9 @@
 INSTANCES=("MONGODB "REDIS" "MYSQL" "RABBITMQ" "CART" "USER" "CATALOGUE" "PAYMENT" "SHIPPING" "DISPATCH" "WEB")
 
 
-if i in "${INSTANCES[@]}"
+for i in "${INSTANCES[@]}"
 do
-    if [ $i == "MONGODB" ] || [ $i == "REDIS" ] || [ $i == "MYSQL" ]
+    if [ $i == "MONGODB" ] || [ $i == "SHIPPING" ] || [ $i == "MYSQL" ]
     then
          INSTANCE_TYPE="t3.small"
     else

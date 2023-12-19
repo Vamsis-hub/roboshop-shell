@@ -2,11 +2,11 @@
 
 INSTANCES=("MONGODB" "REDIS" "MYSQL" "RABBITMQ" "CART" "USER" "CATALOGUE" "PAYMENT" "SHIPPING" "DISPATCH" "WEB")
 
- echo "instanse is: $i
 
 for i in "${INSTANCES[@]}"
 
 do
+     echo "instanse is: $i"
     if [ $i == "MONGODB" ] || [ $i == "SHIPPING" ] || [ $i == "MYSQL" ]
     then
          INSTANCE_TYPE="t3.small"

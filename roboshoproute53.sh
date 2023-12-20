@@ -2,7 +2,7 @@
 
 INSTANCES=("MONGODB" "SHIPPING" "MYSQL" "RABBITMQ" "CART" "USER" "CATALOGUE" "PAYMENT" "REDIS" "DISPATCH" "WEB")
 
-For i in "${INSTANCES[@]}
+for i in "${INSTANCES[@]}
 do
   if [ $i == "MONGODB" ] || [ $i == "SHIPPING" ] || [ $i == "MYSQL" ]
   then 
@@ -32,6 +32,4 @@ do
         }
         }]
     }
-        '
-
 done

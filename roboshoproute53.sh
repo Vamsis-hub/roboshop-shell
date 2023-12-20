@@ -15,7 +15,6 @@ do
 
     echo "$i:$IPADDRESS"
 
-  done
+done
 
 
-  

@@ -23,11 +23,11 @@ do
         ,"Changes": [{
         "Action"              : "CREATE"
         ,"ResourceRecordSet"  : {
-            "Name"              : "$i.saanvi.website"
+            "Name"              : "$i.'saanvi.website'"
             ,"Type"             : "A"
             ,"TTL"              : 1
             ,"ResourceRecords"  : [{
-                "Value"         : "$IPADDRESS"
+                "Value"         : '"$IPADDRESS"'
             }]
         }
         }]

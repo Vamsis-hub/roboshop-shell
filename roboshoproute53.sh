@@ -15,21 +15,7 @@ do
 
     echo "$i:$IPADDRESS"
 
-    aws route53 change-resource-record-sets \
-    --hosted-zone-id Z07247122IIE0GLRLIHLG \
-    --change-batch '
-    {
-        "Comment": "Creating a record set for cognito endpoint"
-        ,"Changes": [{
-        "Action"              : "CREATE"
-        ,"ResourceRecordSet"  : {
-            "Name"              : "$i'.'saanvi.website'"
-            ,"Type"             : "A"
-            ,"TTL"              : 1
-            ,"ResourceRecords"  : [{
-                "Value"         : "'$IPADDRESS'"
-            }]
-        }
-        }]
-    }
-done
+  done
+
+
+  
